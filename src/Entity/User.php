@@ -56,7 +56,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?Gender $gender = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $prodilPicture = null;
+    private ?string $profilPicture = null;
 
     #[ORM\ManyToOne(inversedBy: 'users')]
     #[ORM\JoinColumn(nullable: false)]
@@ -236,14 +236,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getProdilPicture(): ?string
+    public function getprofilPicture(): ?string
     {
-        return $this->prodilPicture;
+        return $this->profilPicture;
     }
 
-    public function setProdilPicture(?string $prodilPicture): static
+    public function setprofilPicture(?string $profilPicture): static
     {
-        $this->prodilPicture = $prodilPicture;
+        $this->profilPicture = $profilPicture;
 
         return $this;
     }

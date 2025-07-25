@@ -1,0 +1,225 @@
+[
+  {
+    "model": "App\\Entity\\Adress",
+    "fields": {
+      "id": 1,
+      "street": "10 rue de la République",
+      "city": "Lyon",
+      "postalCode": "69001",
+      "region": "Auvergne-Rhône-Alpes",
+      "country": "France",
+      "latitude": 45.764043,
+      "longitude": 4.835659
+    }
+  },
+  {
+    "model": "App\\Entity\\Adress",
+    "fields": {
+      "id": 2,
+      "street": "221B Baker Street",
+      "city": "London",
+      "postalCode": "NW1 6XE",
+      "region": "Greater London",
+      "country": "United Kingdom",
+      "latitude": 51.523767,
+      "longitude": -0.1585557
+    }
+  },
+  {
+    "model": "App\\Entity\\User",
+    "fields": {
+      "id": 1,
+      "email": "user1@example.com",
+      "roles": ["ROLE_USER"],
+      "password": "mdp",
+      "firstname": "User1",
+      "lastname": "Test1",
+      "pseudo": "TestUser1",
+      "birthdate": "1990-01-01T00:00:00+00:00",
+      "inscriptionDate": "2023-01-01T00:00:00+00:00",
+      "gender": "female",
+      "prodilPicture": "https://randomuser.me/api/portraits/women/1.jpg",
+      "adress": 2
+    }
+  },
+  {
+    "model": "App\\Entity\\User",
+    "fields": {
+      "id": 2,
+      "email": "user2@example.com",
+      "roles": ["ROLE_USER"],
+      "password": "mdp",
+      "firstname": "User2",
+      "lastname": "Test2",
+      "pseudo": "TestUser2",
+      "birthdate": "1990-01-01T00:00:00+00:00",
+      "inscriptionDate": "2023-01-01T00:00:00+00:00",
+      "gender": "male",
+      "prodilPicture": "https://randomuser.me/api/portraits/men/2.jpg",
+      "adress": 1
+    }
+  },
+  {
+    "model": "App\\Entity\\User",
+    "fields": {
+      "id": 3,
+      "email": "user3@example.com",
+      "roles": ["ROLE_USER"],
+      "password": "mdp",
+      "firstname": "User3",
+      "lastname": "Test3",
+      "pseudo": "TestUser3",
+      "birthdate": "1990-01-01T00:00:00+00:00",
+      "inscriptionDate": "2023-01-01T00:00:00+00:00",
+      "gender": "female",
+      "prodilPicture": "https://randomuser.me/api/portraits/women/3.jpg",
+      "adress": 1
+    }
+  },
+  {
+    "model": "App\\Entity\\Equipment",
+    "fields": {
+      "id": 1,
+      "name": "Wi-Fi",
+      "description": "High speed internet",
+      "iconUrl": "https://cdn-icons-png.flaticon.com/512/545/545682.png"
+    }
+  },
+  {
+    "model": "App\\Entity\\Equipment",
+    "fields": {
+      "id": 2,
+      "name": "Climatisation",
+      "description": "Air conditioning",
+      "iconUrl": "https://cdn-icons-png.flaticon.com/512/1163/1163661.png"
+    }
+  },
+  {
+    "model": "App\\Entity\\Service",
+    "fields": {
+      "id": 1,
+      "name": "Petit déjeuner",
+      "descriptiion": "Inclus chaque matin",
+      "iconUrl": "https://cdn-icons-png.flaticon.com/512/1046/1046784.png"
+    }
+  },
+  {
+    "model": "App\\Entity\\Service",
+    "fields": {
+      "id": 2,
+      "name": "Navette Aéroport",
+      "descriptiion": "Service de transport",
+      "iconUrl": "https://cdn-icons-png.flaticon.com/512/2972/2972507.png"
+    }
+  },
+  {
+    "model": "App\\Entity\\Listing",
+    "fields": {
+      "id": 1,
+      "title": "Superbe logement 1",
+      "description": "Description du logement 1",
+      "pricePerNight": 60,
+      "maxCapacity": 3,
+      "owner": 1
+    }
+  },
+  {
+    "model": "App\\Entity\\Listing",
+    "fields": {
+      "id": 2,
+      "title": "Superbe logement 2",
+      "description": "Description du logement 2",
+      "pricePerNight": 70,
+      "maxCapacity": 4,
+      "owner": 2
+    }
+  },
+  {
+    "model": "App\\Entity\\Booking",
+    "fields": {
+      "id": 1,
+      "beginningDate": "2025-07-22T13:41:57.722692",
+      "totalNights": 4,
+      "status": "CONFIRMED",
+      "nbrGuests": 2,
+      "totalPrice": 120,
+      "listing": 1,
+      "user": 1
+    }
+  },
+  {
+    "model": "App\\Entity\\Booking",
+    "fields": {
+      "id": 2,
+      "beginningDate": "2025-07-21T13:41:57.722711",
+      "totalNights": 5,
+      "status": "CONFIRMED",
+      "nbrGuests": 2,
+      "totalPrice": 140,
+      "listing": 2,
+      "user": 2
+    }
+  },
+  {
+    "model": "App\\Entity\\Comment",
+    "fields": {
+      "id": 1,
+      "content": "Très bon séjour !",
+      "rating": 5,
+      "sentAt": "2025-07-23T13:41:57.722723",
+      "booking": 1,
+      "author": 1
+    }
+  },
+  {
+    "model": "App\\Entity\\Comment",
+    "fields": {
+      "id": 2,
+      "content": "Appartement propre et bien situé.",
+      "rating": 4,
+      "sentAt": "2025-07-23T13:41:57.722727",
+      "booking": 2,
+      "author": 2
+    }
+  },
+  {
+    "model": "App\\Entity\\Message",
+    "fields": {
+      "id": 1,
+      "content": "Bonjour, je voulais confirmer ma réservation.",
+      "sendAt": "2025-07-23T13:41:57.722731",
+      "isRead": true,
+      "sender": 1,
+      "receiver": 2
+    }
+  },
+  {
+    "model": "App\\Entity\\Message",
+    "fields": {
+      "id": 2,
+      "content": "Merci pour votre message, c'est confirmé.",
+      "sendAt": "2025-07-23T13:41:57.722733",
+      "isRead": false,
+      "sender": 2,
+      "receiver": 1
+    }
+  },
+  {
+    "model": "App\\Entity\\Picture",
+    "fields": {
+      "id": 1,
+      "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+      "sortOrder": 1,
+      "listing": 1
+    }
+  },
+  {
+    "model": "App\\Entity\\Picture",
+    "fields": {
+      "id": 2,
+      "url": "https://images.unsplash.com/photo-1560448071-54d5c0ba33d4",
+      "sortOrder": 1,
+      "listing": 2
+    }
+  }
+]

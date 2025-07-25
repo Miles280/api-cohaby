@@ -21,10 +21,10 @@ class Service
     private ?string $name = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $descriptiion = null;
+    private ?string $description = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $iconUrl = null;
+    private ?string $icon = null;
 
     /**
      * @var Collection<int, Listing>
@@ -54,26 +54,26 @@ class Service
         return $this;
     }
 
-    public function getDescriptiion(): ?string
+    public function getdescription(): ?string
     {
-        return $this->descriptiion;
+        return $this->description;
     }
 
-    public function setDescriptiion(string $descriptiion): static
+    public function setdescription(string $description): static
     {
-        $this->descriptiion = $descriptiion;
+        $this->description = $description;
 
         return $this;
     }
 
-    public function getIconUrl(): ?string
+    public function geticon(): ?string
     {
-        return $this->iconUrl;
+        return $this->icon;
     }
 
-    public function setIconUrl(string $iconUrl): static
+    public function seticon(string $icon): static
     {
-        $this->iconUrl = $iconUrl;
+        $this->icon = $icon;
 
         return $this;
     }

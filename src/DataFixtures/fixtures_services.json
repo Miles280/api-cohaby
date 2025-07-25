@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Wi-Fi",
+    "description": "Connexion Internet haut débit",
+    "icon": "wifi"
+  },
+  {
+    "name": "Blanchisserie",
+    "description": "Service de lavage et séchage",
+    "icon": "local_laundry_service"
+  },
+  {
+    "name": "Conciergerie",
+    "description": "Assistance personnelle sur place",
+    "icon": "room_service"
+  },
+  {
+    "name": "Petit-déjeuner inclus",
+    "description": "Commencez la journée avec un bon repas",
+    "icon": "free_breakfast"
+  },
+  {
+    "name": "Réception 24h/24",
+    "description": "Accueil à toute heure",
+    "icon": "support_agent"
+  },
+  {
+    "name": "Navette aéroport",
+    "description": "Transport pratique depuis/vers l’aéroport",
+    "icon": "airport_shuttle"
+  },
+  {
+    "name": "Location de vélos",
+    "description": "Explorez la ville à vélo",
+    "icon": "directions_bike"
+  },
+  {
+    "name": "Service de ménage",
+    "description": "Nettoyage régulier de votre logement",
+    "icon": "cleaning_services"
+  },
+  {
+    "name": "Espace coworking",
+    "description": "Zone dédiée au travail",
+    "icon": "workspaces"
+  },
+  {
+    "name": "Salle de sport",
+    "description": "Accès à une salle équipée",
+    "icon": "fitness_center"
+  },
+  {
+    "name": "Climatisation",
+    "description": "Chambre tempérée toute l’année",
+    "icon": "ac_unit"
+  },
+  {
+    "name": "Parking privé",
+    "description": "Place de parking sécurisée",
+    "icon": "local_parking"
+  },
+  {
+    "name": "Animaux acceptés",
+    "description": "Votre compagnon est le bienvenu",
+    "icon": "pets"
+  },
+  {
+    "name": "Spa & bien-être",
+    "description": "Moment de détente garanti",
+    "icon": "spa"
+  },
+  {
+    "name": "Piscine",
+    "description": "Baignade et relaxation",
+    "icon": "pool"
+  },
+  {
+    "name": "Bar",
+    "description": "Boissons et ambiance conviviale",
+    "icon": "local_bar"
+  },
+  {
+    "name": "Restaurant",
+    "description": "Cuisine sur place",
+    "icon": "restaurant"
+  },
+  {
+    "name": "Sécurité 24/7",
+    "description": "Caméras et personnel sur place",
+    "icon": "security"
+  },
+  {
+    "name": "Bibliothèque",
+    "description": "Espace lecture et détente",
+    "icon": "menu_book"
+  },
+  {
+    "name": "Salle de jeux",
+    "description": "Loisirs pour tous les âges",
+    "icon": "sports_esports"
+  }
+]

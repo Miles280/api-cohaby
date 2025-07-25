@@ -44,9 +44,16 @@ class Adress
     #[ORM\OneToMany(targetEntity: User::class, mappedBy: 'adress')]
     private Collection $users;
 
+    /**
+     * @var Collection<int, Listing>
+     */
+    #[ORM\OneToMany(targetEntity: Listing::class, mappedBy: 'adress')]
+    private Collection $listings;
+
     public function __construct()
     {
         $this->users = new ArrayCollection();
+        $this->listings = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -162,6 +169,36 @@ class Adress
             // set the owning side to null (unless already changed)
             if ($user->getAdress() === $this) {
                 $user->setAdress(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Listing>
+     */
+    public function getListings(): Collection
+    {
+        return $this->listings;
+    }
+
+    public function addListing(Listing $listing): static
+    {
+        if (!$this->listings->contains($listing)) {
+            $this->listings->add($listing);
+            $listing->setAdress($this);
+        }
+
+        return $this;
+    }
+
+    public function removeListing(Listing $listing): static
+    {
+        if ($this->listings->removeElement($listing)) {
+            // set the owning side to null (unless already changed)
+            if ($listing->getAdress() === $this) {
+                $listing->setAdress(null);
             }
         }
 

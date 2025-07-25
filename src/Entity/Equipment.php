@@ -24,7 +24,7 @@ class Equipment
     private ?string $description = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $iconUrl = null;
+    private ?string $icon = null;
 
     /**
      * @var Collection<int, Listing>
@@ -66,14 +66,14 @@ class Equipment
         return $this;
     }
 
-    public function getIconUrl(): ?string
+    public function geticon(): ?string
     {
-        return $this->iconUrl;
+        return $this->icon;
     }
 
-    public function setIconUrl(string $iconUrl): static
+    public function seticon(string $icon): static
     {
-        $this->iconUrl = $iconUrl;
+        $this->icon = $icon;
 
         return $this;
     }

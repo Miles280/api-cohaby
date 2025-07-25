@@ -58,9 +58,14 @@ class Listing
     #[ORM\OneToMany(targetEntity: Booking::class, mappedBy: 'listing')]
     private Collection $bookings;
 
+    #[ORM\ManyToOne(inversedBy: 'listings')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Adress $adress = null;
+
     public function __construct()
     {
         $this->equipments = new ArrayCollection();
+        $this->services = new ArrayCollection();
         $this->pictures = new ArrayCollection();
         $this->bookings = new ArrayCollection();
     }
@@ -240,6 +245,18 @@ class Listing
                 $booking->setListing(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getAdress(): ?Adress
+    {
+        return $this->adress;
+    }
+
+    public function setAdress(?Adress $adress): static
+    {
+        $this->adress = $adress;
 
         return $this;
     }

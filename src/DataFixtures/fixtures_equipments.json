@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Lave-linge",
+    "description": "Machine à laver dans le logement",
+    "icon": "local_laundry_service"
+  },
+  {
+    "name": "Sèche-cheveux",
+    "description": "Appareil fourni dans la salle de bain",
+    "icon": "dry"
+  },
+  {
+    "name": "Bureau",
+    "description": "Espace de travail personnel",
+    "icon": "desk"
+  },
+  {
+    "name": "Télévision",
+    "description": "TV avec chaînes câblées",
+    "icon": "tv"
+  },
+  {
+    "name": "Fer à repasser",
+    "description": "Pour garder vos vêtements impeccables",
+    "icon": "iron"
+  },
+  {
+    "name": "Bouilloire",
+    "description": "Préparez-vous un thé en un instant",
+    "icon": "kettle"
+  },
+  {
+    "name": "Four",
+    "description": "Idéal pour cuisiner sur place",
+    "icon": "oven"
+  },
+  {
+    "name": "Micro-ondes",
+    "description": "Chauffez vos plats rapidement",
+    "icon": "microwave"
+  },
+  {
+    "name": "Réfrigérateur",
+    "description": "Gardez vos aliments au frais",
+    "icon": "kitchen"
+  },
+  {
+    "name": "Grille-pain",
+    "description": "Pour vos petits-déjeuners croustillants",
+    "icon": "toast"
+  },
+  {
+    "name": "Vaisselle",
+    "description": "Assiettes, verres, couverts inclus",
+    "icon": "restaurant"
+  },
+  {
+    "name": "Placard/penderie",
+    "description": "Rangements disponibles",
+    "icon": "wardrobe"
+  },
+  {
+    "name": "Lit double",
+    "description": "Literie confortable",
+    "icon": "bed"
+  },
+  {
+    "name": "Canapé",
+    "description": "Espace salon détente",
+    "icon": "weekend"
+  },
+  {
+    "name": "Rideaux occultants",
+    "description": "Pour de bonnes nuits de sommeil",
+    "icon": "window"
+  },
+  {
+    "name": "Chauffage",
+    "description": "Chaleur garantie en hiver",
+    "icon": "thermostat"
+  },
+  {
+    "name": "Climatisation",
+    "description": "Fraîcheur en été",
+    "icon": "ac_unit"
+  },
+  {
+    "name": "Douche à l’italienne",
+    "description": "Confort et accessibilité",
+    "icon": "shower"
+  },
+  {
+    "name": "Machine à café",
+    "description": "Commencez la journée du bon pied",
+    "icon": "coffee"
+  },
+  {
+    "name": "Miroir mural",
+    "description": "Indispensable pour la salle de bain",
+    "icon": "mirror"
+  }
+]

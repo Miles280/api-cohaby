@@ -1,0 +1,305 @@
+[
+  {
+    "title": "Appartement cosy au centre de Lyon",
+    "description": "Studio moderne proche de toutes commodités, idéal pour un séjour court.",
+    "pricePerNight": 70.0,
+    "maxCapacity": 2
+  },
+  {
+    "title": "Loft design à Marseille",
+    "description": "Loft spacieux et lumineux, parfait pour un séjour entre amis.",
+    "pricePerNight": 120.0,
+    "maxCapacity": 4
+  },
+  {
+    "title": "Chambre privée calme à Toulouse",
+    "description": "Chambre confortable dans une colocation conviviale.",
+    "pricePerNight": 40.0,
+    "maxCapacity": 1
+  },
+  {
+    "title": "Maison familiale avec jardin à Nantes",
+    "description": "Maison spacieuse avec jardin clos, parfaite pour familles.",
+    "pricePerNight": 110.0,
+    "maxCapacity": 6
+  },
+  {
+    "title": "Studio moderne proche gare à Strasbourg",
+    "description": "Studio idéalement situé pour visiter la ville à pied.",
+    "pricePerNight": 55.0,
+    "maxCapacity": 2
+  },
+  {
+    "title": "Appartement avec terrasse à Bordeaux",
+    "description": "Appartement lumineux avec terrasse et vue sur la ville.",
+    "pricePerNight": 95.0,
+    "maxCapacity": 3
+  },
+  {
+    "title": "Duplex charmant à Lille",
+    "description": "Duplex au cœur du vieux Lille, proche commerces et restaurants.",
+    "pricePerNight": 80.0,
+    "maxCapacity": 4
+  },
+  {
+    "title": "Chambre confortable dans colocation à Rennes",
+    "description": "Chambre dans colocation calme, proche transports.",
+    "pricePerNight": 38.0,
+    "maxCapacity": 1
+  },
+  {
+    "title": "Appartement lumineux à Grenoble",
+    "description": "Appartement avec vue sur les montagnes, idéal pour les amoureux de la nature.",
+    "pricePerNight": 75.0,
+    "maxCapacity": 3
+  },
+  {
+    "title": "Maison de charme à Montpellier",
+    "description": "Maison avec jardin dans un quartier calme proche du centre-ville.",
+    "pricePerNight": 115.0,
+    "maxCapacity": 5
+  },
+
+  {
+    "title": "Studio cosy à Dijon",
+    "description": "Petit studio tout équipé, idéal pour une escapade en ville.",
+    "pricePerNight": 50.0,
+    "maxCapacity": 2
+  },
+  {
+    "title": "Appartement moderne à Clermont-Ferrand",
+    "description": "Appartement moderne au cœur de la ville, proche des commerces.",
+    "pricePerNight": 65.0,
+    "maxCapacity": 3
+  },
+  {
+    "title": "Maison spacieuse à Le Havre",
+    "description": "Grande maison familiale proche de la plage et du centre.",
+    "pricePerNight": 130.0,
+    "maxCapacity": 7
+  },
+  {
+    "title": "Appartement avec balcon à Saint-Étienne",
+    "description": "Appartement confortable avec balcon en centre-ville.",
+    "pricePerNight": 60.0,
+    "maxCapacity": 2
+  },
+  {
+    "title": "Chambre dans maison à Toulon",
+    "description": "Chambre simple dans maison avec jardin, proche de la mer.",
+    "pricePerNight": 45.0,
+    "maxCapacity": 1
+  },
+  {
+    "title": "Loft atypique à Angers",
+    "description": "Loft avec décoration originale et équipements modernes.",
+    "pricePerNight": 90.0,
+    "maxCapacity": 3
+  },
+  {
+    "title": "Appartement cosy à Nîmes",
+    "description": "Appartement chaleureux proche des arènes et du centre historique.",
+    "pricePerNight": 70.0,
+    "maxCapacity": 2
+  },
+  {
+    "title": "Maison provençale à Avignon",
+    "description": "Maison traditionnelle avec cour intérieure dans un quartier calme.",
+    "pricePerNight": 120.0,
+    "maxCapacity": 5
+  },
+  {
+    "title": "Studio pratique à Metz",
+    "description": "Studio compact et fonctionnel, proche transports et commerces.",
+    "pricePerNight": 50.0,
+    "maxCapacity": 1
+  },
+  {
+    "title": "Appartement lumineux à Perpignan",
+    "description": "Appartement ensoleillé avec grande terrasse.",
+    "pricePerNight": 80.0,
+    "maxCapacity": 4
+  },
+
+  {
+    "title": "Chambre chez l’habitant à Amiens",
+    "description": "Chambre simple et conviviale dans maison familiale.",
+    "pricePerNight": 35.0,
+    "maxCapacity": 1
+  },
+  {
+    "title": "Appartement moderne à Caen",
+    "description": "Appartement récent avec toutes les commodités.",
+    "pricePerNight": 75.0,
+    "maxCapacity": 3
+  },
+  {
+    "title": "Maison avec jardin à Orléans",
+    "description": "Belle maison familiale avec jardin clos.",
+    "pricePerNight": 110.0,
+    "maxCapacity": 5
+  },
+  {
+    "title": "Studio design à Rouen",
+    "description": "Studio moderne, idéal pour un court séjour professionnel.",
+    "pricePerNight": 60.0,
+    "maxCapacity": 2
+  },
+  {
+    "title": "Appartement calme à Saint-Denis",
+    "description": "Appartement situé dans un quartier tranquille, proche des transports.",
+    "pricePerNight": 70.0,
+    "maxCapacity": 3
+  },
+  {
+    "title": "Maison lumineuse à Besançon",
+    "description": "Maison spacieuse et lumineuse avec jardin.",
+    "pricePerNight": 105.0,
+    "maxCapacity": 5
+  },
+  {
+    "title": "Appartement en centre-ville à La Rochelle",
+    "description": "Appartement proche port et commerces.",
+    "pricePerNight": 85.0,
+    "maxCapacity": 3
+  },
+  {
+    "title": "Studio confortable à Chambéry",
+    "description": "Studio bien équipé proche des montagnes.",
+    "pricePerNight": 55.0,
+    "maxCapacity": 2
+  },
+  {
+    "title": "Maison traditionnelle à Saint-Nazaire",
+    "description": "Maison familiale avec grand jardin.",
+    "pricePerNight": 115.0,
+    "maxCapacity": 6
+  },
+  {
+    "title": "Appartement charmant à Annecy",
+    "description": "Appartement avec vue sur le lac, idéal pour les vacances.",
+    "pricePerNight": 100.0,
+    "maxCapacity": 4
+  },
+
+  {
+    "title": "Studio au calme à Pau",
+    "description": "Studio confortable proche centre-ville.",
+    "pricePerNight": 50.0,
+    "maxCapacity": 2
+  },
+  {
+    "title": "Appartement avec balcon à Bayonne",
+    "description": "Appartement lumineux avec balcon.",
+    "pricePerNight": 75.0,
+    "maxCapacity": 3
+  },
+  {
+    "title": "Maison avec piscine à Albi",
+    "description": "Maison familiale avec piscine et jardin.",
+    "pricePerNight": 130.0,
+    "maxCapacity": 7
+  },
+  {
+    "title": "Loft industriel à Le Mans",
+    "description": "Loft spacieux avec style industriel.",
+    "pricePerNight": 90.0,
+    "maxCapacity": 4
+  },
+  {
+    "title": "Appartement proche mer à La Ciotat",
+    "description": "Appartement idéal pour profiter de la plage.",
+    "pricePerNight": 85.0,
+    "maxCapacity": 3
+  },
+  {
+    "title": "Chambre privée à Vannes",
+    "description": "Chambre simple dans maison familiale.",
+    "pricePerNight": 40.0,
+    "maxCapacity": 1
+  },
+  {
+    "title": "Appartement moderne à Niort",
+    "description": "Appartement avec toutes commodités modernes.",
+    "pricePerNight": 70.0,
+    "maxCapacity": 3
+  },
+  {
+    "title": "Maison en pierre à Périgueux",
+    "description": "Maison traditionnelle en pierre avec jardin.",
+    "pricePerNight": 110.0,
+    "maxCapacity": 5
+  },
+  {
+    "title": "Studio pratique à Montauban",
+    "description": "Studio fonctionnel proche centre-ville.",
+    "pricePerNight": 55.0,
+    "maxCapacity": 1
+  },
+  {
+    "title": "Appartement avec vue à Bourges",
+    "description": "Appartement avec une belle vue sur la ville.",
+    "pricePerNight": 80.0,
+    "maxCapacity": 3
+  },
+  {
+    "title": "Maison familiale à Chalon-sur-Saône",
+    "description": "Maison avec grand jardin, idéale pour familles.",
+    "pricePerNight": 120.0,
+    "maxCapacity": 6
+  },
+  {
+    "title": "Appartement lumineux à Valence",
+    "description": "Appartement proche centre-ville et transports.",
+    "pricePerNight": 75.0,
+    "maxCapacity": 3
+  },
+  {
+    "title": "Studio confortable à Cahors",
+    "description": "Studio tout équipé, idéal pour court séjour.",
+    "pricePerNight": 50.0,
+    "maxCapacity": 2
+  },
+  {
+    "title": "Maison avec terrasse à Sète",
+    "description": "Maison agréable avec terrasse, proche mer.",
+    "pricePerNight": 115.0,
+    "maxCapacity": 5
+  },
+  {
+    "title": "Appartement moderne à Troyes",
+    "description": "Appartement moderne au cœur de la ville.",
+    "pricePerNight": 70.0,
+    "maxCapacity": 3
+  },
+  {
+    "title": "Chambre dans colocation à Quimper",
+    "description": "Chambre privée dans une colocation conviviale.",
+    "pricePerNight": 38.0,
+    "maxCapacity": 1
+  },
+  {
+    "title": "Loft charmant à Calais",
+    "description": "Loft moderne proche centre-ville.",
+    "pricePerNight": 80.0,
+    "maxCapacity": 4
+  },
+  {
+    "title": "Maison avec jardin à Rodez",
+    "description": "Maison confortable avec jardin, idéale pour familles.",
+    "pricePerNight": 110.0,
+    "maxCapacity": 5
+  },
+  {
+    "title": "Appartement avec balcon à Saint-Malo",
+    "description": "Appartement lumineux avec balcon, proche plage.",
+    "pricePerNight": 85.0,
+    "maxCapacity": 3
+  },
+  {
+    "title": "Studio calme à Aurillac",
+    "description": "Studio confortable au calme, proche centre-ville.",
+    "pricePerNight": 50.0,
+    "maxCapacity": 2
+  }
+]

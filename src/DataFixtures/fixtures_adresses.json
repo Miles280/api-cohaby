@@ -1,0 +1,344 @@
+[
+  {
+    "street": "Arpège, 84 Rue de Varenne",
+    "city": "Paris",
+    "postalCode": "75007",
+    "region": "Île-de-France",
+    "country": "France",
+    "latitude": 48.855701,
+    "longitude": 2.317
+  },
+  {
+    "street": "Rue de Rivoli",
+    "city": "Paris",
+    "postalCode": "75001",
+    "region": "Île-de-France",
+    "country": "France",
+    "latitude": 48.8569167,
+    "longitude": 2.3536722
+  },
+  {
+    "street": "Place du Palais‑Royal",
+    "city": "Paris",
+    "postalCode": "75001",
+    "region": "Île-de-France",
+    "country": "France",
+    "latitude": 48.8625,
+    "longitude": 2.33667
+  },
+  {
+    "street": "Carrousel du Louvre, 99 Rue de Rivoli",
+    "city": "Paris",
+    "postalCode": "75001",
+    "region": "Île-de-France",
+    "country": "France",
+    "latitude": 48.862747,
+    "longitude": 2.334706
+  },
+  {
+    "street": "BHV Marais, 52 Rue de Rivoli",
+    "city": "Paris",
+    "postalCode": "75004",
+    "region": "Île-de-France",
+    "country": "France",
+    "latitude": 48.857403,
+    "longitude": 2.353169
+  },
+  {
+    "street": "196 Rue de Rivoli",
+    "city": "Paris",
+    "postalCode": "75004",
+    "region": "Île-de-France",
+    "country": "France",
+    "latitude": 48.864126,
+    "longitude": 2.331125
+  },
+  {
+    "street": "Rue du Pont‑Louis‑Philippe",
+    "city": "Paris",
+    "postalCode": "75004",
+    "region": "Île-de-France",
+    "country": "France",
+    "latitude": 48.85528,
+    "longitude": 2.35583
+  },
+  {
+    "street": "Rue d'Alger",
+    "city": "Paris",
+    "postalCode": "75001",
+    "region": "Île-de-France",
+    "country": "France",
+    "latitude": 48.865579,
+    "longitude": 2.329946
+  },
+  {
+    "street": "Rue du Vingt‑Neuf‑Juillet",
+    "city": "Paris",
+    "postalCode": "75001",
+    "region": "Île-de-France",
+    "country": "France",
+    "latitude": 48.86511,
+    "longitude": 2.330579
+  },
+  {
+    "street": "Louvre–Rivoli (métro station)",
+    "city": "Paris",
+    "postalCode": "75001",
+    "region": "Île-de-France",
+    "country": "France",
+    "latitude": 48.86108,
+    "longitude": 2.340283
+  },
+  {
+    "street": "22 rue de la Loge",
+    "city": "Marseille",
+    "postalCode": "13002",
+    "region": "Provence‑Alpes‑Côte d'Azur",
+    "country": "France",
+    "latitude": 43.296367,
+    "longitude": 5.368363
+  },
+  {
+    "street": "9 Quai du Lazaret",
+    "city": "Marseille",
+    "postalCode": "13002",
+    "region": "Provence‑Alpes‑Côte d'Azur",
+    "country": "France",
+    "latitude": 43.306735,
+    "longitude": 5.364186
+  },
+  {
+    "street": "3 Boulevard Michelet",
+    "city": "Marseille",
+    "postalCode": "13008",
+    "region": "Provence‑Alpes‑Côte d'Azur",
+    "country": "France",
+    "latitude": 43.269,
+    "longitude": 5.395
+  },
+  {
+    "street": "6 Prom. Georges Pompidou",
+    "city": "Marseille",
+    "postalCode": "13008",
+    "region": "Provence‑Alpes‑Côte d'Azur",
+    "country": "France",
+    "latitude": 43.26679,
+    "longitude": 5.371511
+  },
+  {
+    "street": "Vallon des Auffes",
+    "city": "Marseille",
+    "postalCode": "13007",
+    "region": "Provence‑Alpes‑Côte d'Azur",
+    "country": "France",
+    "latitude": 43.2836,
+    "longitude": 5.3478
+  },
+  {
+    "street": "Vieux Port",
+    "city": "Marseille",
+    "postalCode": "13001",
+    "region": "Provence‑Alpes‑Côte d'Azur",
+    "country": "France",
+    "latitude": 43.295511,
+    "longitude": 5.373842
+  },
+  {
+    "street": "Plage de la Pointe Rouge",
+    "city": "Marseille",
+    "postalCode": "13008",
+    "region": "Provence‑Alpes‑Côte d'Azur",
+    "country": "France",
+    "latitude": 43.24459,
+    "longitude": 5.37106
+  },
+  {
+    "street": "Plage des Catalans",
+    "city": "Marseille",
+    "postalCode": "13007",
+    "region": "Provence‑Alpes‑Côte d'Azur",
+    "country": "France",
+    "latitude": 43.29047,
+    "longitude": 5.3557
+  },
+  {
+    "street": "Plages de Corbières",
+    "city": "Marseille",
+    "postalCode": "13016",
+    "region": "Provence‑Alpes‑Côte d'Azur",
+    "country": "France",
+    "latitude": 43.24459,
+    "longitude": 5.37106
+  },
+  {
+    "street": "Rue de la République",
+    "city": "Lyon",
+    "postalCode": "69002",
+    "region": "Auvergne‑Rhône‑Alpes",
+    "country": "France",
+    "latitude": 45.762553,
+    "longitude": 4.835775
+  },
+  {
+    "street": "Rue du Président‑Carnot",
+    "city": "Lyon",
+    "postalCode": "69002",
+    "region": "Auvergne‑Rhône‑Alpes",
+    "country": "France",
+    "latitude": 45.76239,
+    "longitude": 4.837133
+  },
+  {
+    "street": "Rue Mercière",
+    "city": "Lyon",
+    "postalCode": "69002",
+    "region": "Auvergne‑Rhône‑Alpes",
+    "country": "France",
+    "latitude": 45.762486,
+    "longitude": 4.832794
+  },
+  {
+    "street": "Rue Vaucanson",
+    "city": "Lyon",
+    "postalCode": "69001",
+    "region": "Auvergne‑Rhône‑Alpes",
+    "country": "France",
+    "latitude": 45.7737,
+    "longitude": 4.83331
+  },
+  {
+    "street": "69 rue de Marseille",
+    "city": "Lyon",
+    "postalCode": "69007",
+    "region": "Auvergne‑Rhône‑Alpes",
+    "country": "France",
+    "latitude": 45.748412,
+    "longitude": 4.838122
+  },
+  {
+    "street": "12 Rue de la Verge d'Or",
+    "city": "Toulouse",
+    "postalCode": "31000",
+    "region": "Occitanie",
+    "country": "France",
+    "latitude": 43.610888,
+    "longitude": 1.440128
+  },
+  {
+    "street": "32 rue Mathaly",
+    "city": "Toulouse",
+    "postalCode": "31200",
+    "region": "Occitanie",
+    "country": "France",
+    "latitude": 43.62899,
+    "longitude": 1.42982
+  },
+  {
+    "street": "5 avenue des Écoles‑Jules‑Julien",
+    "city": "Toulouse",
+    "postalCode": "31400",
+    "region": "Occitanie",
+    "country": "France",
+    "latitude": 43.57474,
+    "longitude": 1.45468
+  },
+  {
+    "street": "Cour Mirabeau, 67 Cours Mirabeau",
+    "city": "Aix‑en‑Provence",
+    "postalCode": "13100",
+    "region": "Provence‑Alpes‑Côte d'Azur",
+    "country": "France",
+    "latitude": 43.527414,
+    "longitude": 5.451451
+  },
+  {
+    "street": "23 allée de la Source",
+    "city": "Dardilly",
+    "postalCode": "69570",
+    "region": "Auvergne‑Rhône‑Alpes",
+    "country": "France",
+    "latitude": 45.81531,
+    "longitude": 4.741585
+  },
+  {
+    "street": "120 rue Etchenique",
+    "city": "Bordeaux",
+    "postalCode": "33200",
+    "region": "Nouvelle‑Aquitaine",
+    "country": "France",
+    "latitude": 44.837789,
+    "longitude": -0.57918
+  },
+  {
+    "street": "4 Rue des Louviers",
+    "city": "Saint‑Germain‑en‑Laye",
+    "postalCode": "78100",
+    "region": "Île‑de‑France",
+    "country": "France",
+    "latitude": 48.897533,
+    "longitude": 2.091639
+  },
+  {
+    "street": "29 Rue Jules Guesde",
+    "city": "Montceau‑les‑Mines",
+    "postalCode": "71300",
+    "region": "Bourgogne‑Franche‑Comté",
+    "country": "France",
+    "latitude": 46.676274,
+    "longitude": 4.364132
+  },
+  {
+    "street": "35400 Rue Jean XXIII",
+    "city": "Saint‑Malo",
+    "postalCode": "35400",
+    "region": "Bretagne",
+    "country": "France",
+    "latitude": 48.634047,
+    "longitude": -2.016471
+  },
+  {
+    "street": "64 rue du Professeur Emile Sergent",
+    "city": "Rambouillet",
+    "postalCode": "78680",
+    "region": "Île‑de‑France",
+    "country": "France",
+    "latitude": 48.636,
+    "longitude": 1.838
+  },
+  {
+    "street": "23 Avenue Nina d'Asty",
+    "city": "Château‑d'Olonne",
+    "postalCode": "85180",
+    "region": "Pays de la Loire",
+    "country": "France",
+    "latitude": 46.476778,
+    "longitude": -1.75159
+  },
+  {
+    "street": "4 Chemin du Carrefour Lançon",
+    "city": "Triel‑sur‑Seine",
+    "postalCode": "78510",
+    "region": "Île‑de‑France",
+    "country": "France",
+    "latitude": 49.002826,
+    "longitude": 2.009984
+  },
+  {
+    "street": "Avenue Franklin Roosevelt",
+    "city": "Lyon",
+    "postalCode": "69006",
+    "region": "Auvergne‑Rhône‑Alpes",
+    "country": "France",
+    "latitude": 45.76,
+    "longitude": 4.841
+  },
+  {
+    "street": "Montée de la Grande Côte",
+    "city": "Lyon",
+    "postalCode": "69001",
+    "region": "Auvergne‑Rhône‑Alpes",
+    "country": "France",
+    "latitude": 45.77,
+    "longitude": 4.83
+  }
+]
