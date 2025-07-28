@@ -1,0 +1,289 @@
+[
+  {
+    "content": "Salut ! Tu es dispo pour une visite demain ?",
+    "sendAt": "2024-05-21T10:12:00+00:00",
+    "isRead": true,
+    "sender": "3",
+    "receiver": "12"
+  },
+  {
+    "content": "Oui ça marche, 16h ?",
+    "sendAt": "2024-05-21T10:17:00+00:00",
+    "isRead": true,
+    "sender": "12",
+    "receiver": "3"
+  },
+  {
+    "content": "Superbe logement ! Merci encore !",
+    "sendAt": "2024-04-12T15:00:00+00:00",
+    "isRead": false,
+    "sender": "5",
+    "receiver": "22"
+  },
+  {
+    "content": "Pas de souci ! Hésite pas à me dire si t'as des questions.",
+    "sendAt": "2024-04-12T15:08:00+00:00",
+    "isRead": true,
+    "sender": "22",
+    "receiver": "5"
+  },
+  {
+    "content": "Tu as reçu les documents pour la réservation ?",
+    "sendAt": "2024-06-02T08:45:00+00:00",
+    "isRead": false,
+    "sender": "11",
+    "receiver": "1"
+  },
+  {
+    "content": "Oui tout est bon, j’ai signé le contrat !",
+    "sendAt": "2024-06-02T09:13:00+00:00",
+    "isRead": true,
+    "sender": "1",
+    "receiver": "11"
+  },
+  {
+    "content": "Je suis arrivé, mais je trouve pas l’interphone…",
+    "sendAt": "2024-07-04T17:32:00+00:00",
+    "isRead": false,
+    "sender": "7",
+    "receiver": "19"
+  },
+  {
+    "content": "Appuie sur 17B, il est un peu caché à droite de la porte.",
+    "sendAt": "2024-07-04T17:33:00+00:00",
+    "isRead": true,
+    "sender": "19",
+    "receiver": "7"
+  },
+  {
+    "content": "Hello, le check-out c’est bien avant 10h ?",
+    "sendAt": "2024-07-25T22:30:00+00:00",
+    "isRead": false,
+    "sender": "8",
+    "receiver": "33"
+  },
+  {
+    "content": "Oui, on doit nettoyer derrière :) Merci !",
+    "sendAt": "2024-07-25T22:32:00+00:00",
+    "isRead": false,
+    "sender": "33",
+    "receiver": "8"
+  },
+  {
+    "content": "Tu peux me renvoyer la facture stp ?",
+    "sendAt": "2024-06-10T12:20:00+00:00",
+    "isRead": true,
+    "sender": "4",
+    "receiver": "30"
+  },
+  {
+    "content": "Oui bien sûr, je te l’envoie dans 5 minutes.",
+    "sendAt": "2024-06-10T12:21:00+00:00",
+    "isRead": true,
+    "sender": "30",
+    "receiver": "4"
+  },
+  {
+    "content": "Merci pour l’accueil, c’était top !",
+    "sendAt": "2024-05-29T18:00:00+00:00",
+    "isRead": false,
+    "sender": "10",
+    "receiver": "14"
+  },
+  {
+    "content": "Avec plaisir ! Bonne route :)",
+    "sendAt": "2024-05-29T18:01:00+00:00",
+    "isRead": true,
+    "sender": "14",
+    "receiver": "10"
+  },
+  {
+    "content": "La machine à laver fait un bruit bizarre 😅",
+    "sendAt": "2024-07-01T09:00:00+00:00",
+    "isRead": true,
+    "sender": "17",
+    "receiver": "29"
+  },
+  {
+    "content": "Ah mince, j'arrive voir ça cet aprem !",
+    "sendAt": "2024-07-01T09:10:00+00:00",
+    "isRead": true,
+    "sender": "29",
+    "receiver": "17"
+  },
+  {
+    "content": "Tu penses venir vers quelle heure ?",
+    "sendAt": "2024-07-01T11:20:00+00:00",
+    "isRead": false,
+    "sender": "17",
+    "receiver": "29"
+  },
+  {
+    "content": "Plutôt vers 14h30 si ça te va.",
+    "sendAt": "2024-07-01T11:45:00+00:00",
+    "isRead": true,
+    "sender": "29",
+    "receiver": "17"
+  },
+  {
+    "content": "Salut, j’ai oublié mes lunettes sur la table…",
+    "sendAt": "2024-06-14T07:22:00+00:00",
+    "isRead": true,
+    "sender": "6",
+    "receiver": "13"
+  },
+  {
+    "content": "Je regarde et je te redis !",
+    "sendAt": "2024-06-14T07:25:00+00:00",
+    "isRead": true,
+    "sender": "13",
+    "receiver": "6"
+  },
+  {
+    "content": "Tu peux m’envoyer une photo du frigo ?",
+    "sendAt": "2024-06-18T19:00:00+00:00",
+    "isRead": false,
+    "sender": "16",
+    "receiver": "9"
+  },
+  {
+    "content": "Oui attends, je te fais ça.",
+    "sendAt": "2024-06-18T19:01:00+00:00",
+    "isRead": true,
+    "sender": "9",
+    "receiver": "16"
+  },
+  {
+    "content": "On peut avancer la visite à 13h ?",
+    "sendAt": "2024-05-19T08:50:00+00:00",
+    "isRead": false,
+    "sender": "20",
+    "receiver": "2"
+  },
+  {
+    "content": "Ça me va, à tout à l’heure !",
+    "sendAt": "2024-05-19T08:53:00+00:00",
+    "isRead": true,
+    "sender": "2",
+    "receiver": "20"
+  },
+  {
+    "content": "La wifi marche plus depuis ce matin 😕",
+    "sendAt": "2024-07-11T06:20:00+00:00",
+    "isRead": true,
+    "sender": "15",
+    "receiver": "21"
+  },
+  {
+    "content": "Je redémarre la box à distance !",
+    "sendAt": "2024-07-11T06:25:00+00:00",
+    "isRead": true,
+    "sender": "21",
+    "receiver": "15"
+  },
+  {
+    "content": "C’est bon, tout remarche 👌",
+    "sendAt": "2024-07-11T06:27:00+00:00",
+    "isRead": true,
+    "sender": "15",
+    "receiver": "21"
+  },
+  {
+    "content": "C’est bien 35€/nuit tout compris ?",
+    "sendAt": "2024-06-06T13:02:00+00:00",
+    "isRead": false,
+    "sender": "23",
+    "receiver": "24"
+  },
+  {
+    "content": "Oui, charges et linge inclus 🙂",
+    "sendAt": "2024-06-06T13:10:00+00:00",
+    "isRead": true,
+    "sender": "24",
+    "receiver": "23"
+  },
+  {
+    "content": "On se retrouve directement sur place ?",
+    "sendAt": "2024-07-05T17:45:00+00:00",
+    "isRead": true,
+    "sender": "31",
+    "receiver": "6"
+  },
+  {
+    "content": "Oui, devant le 42 rue Pasteur :)",
+    "sendAt": "2024-07-05T17:46:00+00:00",
+    "isRead": true,
+    "sender": "6",
+    "receiver": "31"
+  },
+  {
+    "content": "Est-ce qu’il y a une place de parking ?",
+    "sendAt": "2024-06-09T11:30:00+00:00",
+    "isRead": true,
+    "sender": "18",
+    "receiver": "35"
+  },
+  {
+    "content": "Non, mais il y a un parking public gratuit juste en face.",
+    "sendAt": "2024-06-09T11:35:00+00:00",
+    "isRead": true,
+    "sender": "35",
+    "receiver": "18"
+  },
+  {
+    "content": "Merci pour ton retour rapide !",
+    "sendAt": "2024-06-09T11:36:00+00:00",
+    "isRead": true,
+    "sender": "18",
+    "receiver": "35"
+  },
+  {
+    "content": "Il reste des dates libres en août ?",
+    "sendAt": "2024-06-15T14:00:00+00:00",
+    "isRead": true,
+    "sender": "36",
+    "receiver": "7"
+  },
+  {
+    "content": "Oui, du 12 au 18 est encore dispo !",
+    "sendAt": "2024-06-15T14:02:00+00:00",
+    "isRead": true,
+    "sender": "7",
+    "receiver": "36"
+  },
+  {
+    "content": "Ok, je bloque ces dates alors !",
+    "sendAt": "2024-06-15T14:04:00+00:00",
+    "isRead": true,
+    "sender": "36",
+    "receiver": "7"
+  },
+  {
+    "content": "J’ai laissé les clés dans la boîte aux lettres :)",
+    "sendAt": "2024-07-16T08:10:00+00:00",
+    "isRead": false,
+    "sender": "32",
+    "receiver": "25"
+  },
+  {
+    "content": "Parfait, merci beaucoup !",
+    "sendAt": "2024-07-16T08:11:00+00:00",
+    "isRead": true,
+    "sender": "25",
+    "receiver": "32"
+  },
+  {
+    "content": "C’est quoi déjà le code wifi ?",
+    "sendAt": "2024-07-20T21:45:00+00:00",
+    "isRead": false,
+    "sender": "26",
+    "receiver": "38"
+  },
+  {
+    "content": "C’est : W1f1T0p2024",
+    "sendAt": "2024-07-20T21:47:00+00:00",
+    "isRead": true,
+    "sender": "38",
+    "receiver": "26"
+  }
+]

@@ -4,8 +4,11 @@ namespace App\DataFixtures;
 
 use App\Entity\User;
 use App\Entity\Adress;
+use App\Entity\Booking;
+use App\Entity\Comment;
 use App\Entity\Equipment;
 use App\Entity\Listing;
+use App\Entity\Message;
 use App\Entity\Picture;
 use App\Entity\Service;
 use App\Enum\Gender;
@@ -147,6 +150,76 @@ class AppFixtures extends Fixture
             $manager->persist($listing);
 
             $listingRefs[$index + 1] = $listing;
+        }
+        
+        
+        // ----- Réservations + Commentaires -----
+        $bookingsCount = 80;
+
+        $sampleComments = [
+            "Super séjour, je recommande !",
+            "Hôte très sympathique et logement propre.",
+            "Bonne expérience dans l’ensemble.",
+            "Quelques soucis avec l’eau chaude.",
+            "Très bon rapport qualité/prix.",
+            "Emplacement parfait, je reviendrai.",
+            "Un peu bruyant la nuit.",
+            "Propre et bien équipé, conforme aux photos.",
+            "Accueil chaleureux, logement agréable.",
+            "Déçu par la propreté."
+        ];
+
+        for ($i = 0; $i < $bookingsCount; $i++) {
+            $booking = new Booking();
+
+            $listing = $listingRefs[array_rand($listingRefs)];
+
+            // Booker ≠ Owner
+            do {
+                $user = $userRefs[array_rand($userRefs)];
+            } while ($user === $listing->getOwner());
+
+            $beginningDate = new \DateTimeImmutable(sprintf('+%d days', random_int(1, 90)));
+            $nights = random_int(2, 14);
+            $endingDate = $beginningDate->modify("+$nights days");
+
+            $booking->setUser($user);
+            $booking->setListing($listing);
+            $booking->setBeginningDate(\DateTime::createFromImmutable($beginningDate));
+            $booking->setTotalNights($nights);
+            $booking->setStatus(\App\Enum\BookingStatus::ACCEPTED);
+            $booking->setNbrGuests(random_int(1, $listing->getMaxCapacity()));
+            $booking->setTotalPrice($listing->getPricePerNight() * $nights);
+
+            $manager->persist($booking);
+
+            // 1 chance sur 2 d'ajouter un commentaire
+            if (random_int(0, 1)) {
+                $comment = new Comment();
+                $comment->setBooking($booking);
+                $comment->setAuthor($user);
+                $comment->setRating(random_int(1, 5));
+                $comment->setContent($sampleComments[array_rand($sampleComments)]);
+                $comment->setSentAt((new \DateTime())->modify(sprintf('-%d days', random_int(0, 30)))); // un commentaire récent
+
+                $manager->persist($comment);
+            }
+        }
+
+
+        // ----- Messages -----
+        $messagesData = json_decode(file_get_contents(__DIR__ . '/fixtures_messages.json'), true);
+
+        foreach ($messagesData as $data) {
+            $message = new Message();
+
+            $message->setContent($data['content']);
+            $message->setSendAt(new \DateTime($data['sendAt']));
+            $message->setIsRead($data['isRead']);
+            $message->setSender($userRefs[$data['sender']]);
+            $message->setReceiver($userRefs[$data['receiver']]);
+
+            $manager->persist($message);
         }
 
 
