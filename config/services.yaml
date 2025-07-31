@@ -15,3 +15,13 @@ services:
   Gedmo\Sortable\SortableListener:
     tags:
       - { name: doctrine.event_subscriber, connection: default }
+
+  App\State\UserPasswordHasher:
+    arguments:
+      $persistProcessor: "@api_platform.doctrine.orm.state.persist_processor"
+    tags:
+      - {
+          name: "api_platform.state_processor",
+          priority: 10,
+          operation: 'App\Entity\User:post',
+        }
