@@ -7,7 +7,6 @@ use App\Repository\PictureRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
 
-
 #[ORM\Entity(repositoryClass: PictureRepository::class)]
 #[ApiResource]
 class Picture
