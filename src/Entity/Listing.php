@@ -2,6 +2,9 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Doctrine\Orm\Filter\RangeFilter;
+use ApiPlatform\Doctrine\Orm\Filter\SearchFilter;
+use ApiPlatform\Metadata\ApiFilter;
 use ApiPlatform\Metadata\ApiResource;
 use App\Repository\ListingRepository;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -11,6 +14,16 @@ use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ListingRepository::class)]
 #[ApiResource]
+#[ApiFilter(SearchFilter::class, properties: [
+    'adress.city' => 'partial',   // recherche partielle sur la ville
+    'adress.street' => 'partial', // recherche partielle sur la rue
+    'equipments.name' => 'exact', // filtre équipements exact
+    'services.name' => 'exact'    // filtre services exact
+])]
+#[ApiFilter(RangeFilter::class, properties: [
+    'pricePerNight',
+    'maxCapacity'
+])]
 class Listing
 {
     #[ORM\Id]
