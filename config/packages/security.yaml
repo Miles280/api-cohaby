@@ -37,4 +37,4 @@ security:
 
     # Tout le reste de l'API nécessite un token JWT
     - { path: ^/api, roles: PUBLIC_ACCESS }
-    # - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
+    - { path: ^/api/me, roles: IS_AUTHENTICATED_FULLY }

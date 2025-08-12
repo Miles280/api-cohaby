@@ -62,7 +62,7 @@ class Listing
     /**
      * @var Collection<int, Picture>
      */
-    #[ORM\OneToMany(targetEntity: Picture::class, mappedBy: 'listing', orphanRemoval: true)]
+    #[ORM\OneToMany(targetEntity: Picture::class, mappedBy: 'listing',cascade: ['persist', 'remove'], orphanRemoval: true)]
     private Collection $pictures;
 
     /**
