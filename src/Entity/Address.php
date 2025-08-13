@@ -8,13 +8,13 @@ use ApiPlatform\Metadata\GetCollection;
 use ApiPlatform\Metadata\Patch;
 use ApiPlatform\Metadata\Post;
 use ApiPlatform\Metadata\Put;
-use App\Repository\AdressRepository;
+use App\Repository\AddressRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
 
-#[ORM\Entity(repositoryClass: AdressRepository::class)]
+#[ORM\Entity(repositoryClass: AddressRepository::class)]
 #[ApiResource(
     operations: [
         new Get(),
@@ -22,54 +22,56 @@ use Symfony\Component\Serializer\Annotation\Groups;
         new Post(),
         new Put(),
         new Patch()
-    ]
+    ],
+    normalizationContext: ['groups' => ['address:read']],
+    denormalizationContext: ['groups' => ['address:write']],
 )]
-class Adress
+class Address
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups(['user:read'])]
+    #[Groups(['address:read', 'address:write'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['user:read'])]
+    #[Groups(['address:read', 'address:write'])]
     private ?string $street = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['user:read'])]
+    #[Groups(['address:read', 'address:write'])]
     private ?string $city = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['user:read'])]
+    #[Groups(['address:read', 'address:write'])]
     private ?string $postalCode = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['user:read'])]
+    #[Groups(['address:read', 'address:write'])]
     private ?string $region = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['user:read'])]
+    #[Groups(['address:read', 'address:write'])]
     private ?string $country = null;
 
     #[ORM\Column]
-    #[Groups(['user:read'])]
+    #[Groups(['address:read', 'address:write'])]
     private ?float $latitude = null;
 
     #[ORM\Column]
-    #[Groups(['user:read'])]
+    #[Groups(['address:read', 'address:write'])]
     private ?float $longitude = null;
 
     /**
      * @var Collection<int, User>
      */
-    #[ORM\OneToMany(targetEntity: User::class, mappedBy: 'adress')]
+    #[ORM\OneToMany(targetEntity: User::class, mappedBy: 'address')]
     private Collection $users;
 
     /**
      * @var Collection<int, Listing>
      */
-    #[ORM\OneToMany(targetEntity: Listing::class, mappedBy: 'adress')]
+    #[ORM\OneToMany(targetEntity: Listing::class, mappedBy: 'address')]
     private Collection $listings;
 
     public function __construct()
@@ -179,7 +181,7 @@ class Adress
     {
         if (!$this->users->contains($user)) {
             $this->users->add($user);
-            $user->setAdress($this);
+            $user->setAddress($this);
         }
 
         return $this;
@@ -189,8 +191,8 @@ class Adress
     {
         if ($this->users->removeElement($user)) {
             // set the owning side to null (unless already changed)
-            if ($user->getAdress() === $this) {
-                $user->setAdress(null);
+            if ($user->getAddress() === $this) {
+                $user->setAddress(null);
             }
         }
 
@@ -209,7 +211,7 @@ class Adress
     {
         if (!$this->listings->contains($listing)) {
             $this->listings->add($listing);
-            $listing->setAdress($this);
+            $listing->setAddress($this);
         }
 
         return $this;
@@ -219,8 +221,8 @@ class Adress
     {
         if ($this->listings->removeElement($listing)) {
             // set the owning side to null (unless already changed)
-            if ($listing->getAdress() === $this) {
-                $listing->setAdress(null);
+            if ($listing->getAddress() === $this) {
+                $listing->setAddress(null);
             }
         }
 

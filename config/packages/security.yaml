@@ -27,14 +27,15 @@ security:
       jwt: ~
 
   access_control:
-    # Routes publiques (ex : listings, public infos, etc.)
+    # Routes publiques
     - { path: ^/api/listings, roles: PUBLIC_ACCESS }
+    - { path: ^/api/services, roles: PUBLIC_ACCESS }
+    - { path: ^/api/equipment, roles: PUBLIC_ACCESS }
+    - { path: ^/api/pictures, roles: PUBLIC_ACCESS }
     - { path: ^/api/users$, roles: PUBLIC_ACCESS, methods: [POST] }
-    - { path: ^/api/adresses$, roles: PUBLIC_ACCESS, methods: [POST] }
-
-    # Route de login
+    - { path: ^/api/addresses$, roles: PUBLIC_ACCESS, methods: [POST] }
     - { path: ^/api/login, roles: PUBLIC_ACCESS }
 
-    # Tout le reste de l'API nécessite un token JWT
-    - { path: ^/api, roles: PUBLIC_ACCESS }
+    # Routes nécessitant authentification
     - { path: ^/api/me, roles: IS_AUTHENTICATED_FULLY }
+    - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }

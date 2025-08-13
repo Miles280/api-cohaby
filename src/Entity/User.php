@@ -89,7 +89,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\ManyToOne(inversedBy: 'users')]
     #[ORM\JoinColumn(nullable: false)]
     #[Groups(['user:read', 'user:write'])]
-    private ?Adress $adress = null;
+    private ?Address $address = null;
 
     /**
      * @var Collection<int, Listing>
@@ -278,14 +278,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getAdress(): ?Adress
+    public function getAddress(): ?Address
     {
-        return $this->adress;
+        return $this->address;
     }
 
-    public function setAdress(?Adress $adress): static
+    public function setAddress(?Address $address): static
     {
-        $this->adress = $adress;
+        $this->address = $address;
 
         return $this;
     }

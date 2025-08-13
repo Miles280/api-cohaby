@@ -6,17 +6,34 @@ use ApiPlatform\Doctrine\Orm\Filter\RangeFilter;
 use ApiPlatform\Doctrine\Orm\Filter\SearchFilter;
 use ApiPlatform\Metadata\ApiFilter;
 use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\Get;
+use ApiPlatform\Metadata\GetCollection;
+use ApiPlatform\Metadata\Patch;
+use ApiPlatform\Metadata\Post;
+use ApiPlatform\Metadata\Put;
 use App\Repository\ListingRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
+use Symfony\Component\Serializer\Annotation\MaxDepth;
 
 #[ORM\Entity(repositoryClass: ListingRepository::class)]
-#[ApiResource]
+#[ApiResource(
+    operations: [
+        new Get(),
+        new GetCollection(),
+        new Post(),
+        new Put(),
+        new Patch()
+    ],
+    normalizationContext: ['groups' => ['listing:read'], 'enable_max_depth' => true],
+    denormalizationContext: ['groups' => ['listing:write']]
+)]
 #[ApiFilter(SearchFilter::class, properties: [
-    'adress.city' => 'partial',   // recherche partielle sur la ville
-    'adress.street' => 'partial', // recherche partielle sur la rue
+    'Address.city' => 'partial',   // recherche partielle sur la ville
+    'Address.street' => 'partial', // recherche partielle sur la rue
     'equipments.name' => 'exact', // filtre équipements exact
     'services.name' => 'exact'    // filtre services exact
 ])]
@@ -29,40 +46,51 @@ class Listing
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['listing:read'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
+    #[Groups(['listing:read', 'listing:write'])]
     private ?string $title = null;
 
     #[ORM\Column(type: Types::TEXT)]
+    #[Groups(['listing:read', 'listing:write'])]
     private ?string $description = null;
 
     #[ORM\Column]
+    #[Groups(['listing:read', 'listing:write'])]
     private ?float $pricePerNight = null;
 
     #[ORM\Column]
+    #[Groups(['listing:read', 'listing:write'])]
     private ?int $maxCapacity = null;
 
     #[ORM\ManyToOne(inversedBy: 'listings')]
     #[ORM\JoinColumn(nullable: false)]
+    #[Groups(['listing:read', 'listing:write'])]
+    #[MaxDepth(1)]
     private ?User $owner = null;
 
     /**
      * @var Collection<int, Service>
      */
     #[ORM\ManyToMany(targetEntity: Service::class, mappedBy: 'listings')]
+    #[MaxDepth(1)]
     private Collection $services;
 
     /**
      * @var Collection<int, Equipment>
      */
     #[ORM\ManyToMany(targetEntity: Equipment::class, mappedBy: 'listings')]
+    #[MaxDepth(1)]
     private Collection $equipments;
 
     /**
      * @var Collection<int, Picture>
      */
     #[ORM\OneToMany(targetEntity: Picture::class, mappedBy: 'listing',cascade: ['persist', 'remove'], orphanRemoval: true)]
+    #[Groups(['listing:read'])]
+    #[MaxDepth(1)]
     private Collection $pictures;
 
     /**
@@ -73,7 +101,8 @@ class Listing
 
     #[ORM\ManyToOne(inversedBy: 'listings')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?Adress $adress = null;
+    #[Groups(['listing:read', 'listing:write'])]
+    private ?Address $address = null;
 
     public function __construct()
     {
@@ -262,14 +291,14 @@ class Listing
         return $this;
     }
 
-    public function getAdress(): ?Adress
+    public function getAddress(): ?Address
     {
-        return $this->adress;
+        return $this->address;
     }
 
-    public function setAdress(?Adress $adress): static
+    public function setAddress(?Address $address): static
     {
-        $this->adress = $adress;
+        $this->address = $address;
 
         return $this;
     }

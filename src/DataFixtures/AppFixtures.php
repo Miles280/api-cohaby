@@ -3,7 +3,7 @@
 namespace App\DataFixtures;
 
 use App\Entity\User;
-use App\Entity\Adress;
+use App\Entity\Address;
 use App\Entity\Booking;
 use App\Entity\Comment;
 use App\Entity\Equipment;
@@ -27,23 +27,23 @@ class AppFixtures extends Fixture
 
     public function load(ObjectManager $manager): void
     {
-        // ----- ADRESSES -----
-        $adressData = json_decode(file_get_contents(__DIR__ . '/fixtures_adresses.json'), true);
-        $adressRefs = [];
+        // ----- ADDRESSES -----
+        $addressData = json_decode(file_get_contents(__DIR__ . '/fixtures_addresses.json'), true);
+        $addressRefs = [];
         
-        foreach ($adressData as $index => $data) {
-            $adress = new Adress();
-            $adress->setStreet($data['street']);
-            $adress->setCity($data['city']);
-            $adress->setPostalCode($data['postalCode']);
-            $adress->setRegion($data['region']);
-            $adress->setCountry($data['country']);
-            $adress->setLatitude($data['latitude']);
-            $adress->setLongitude($data['longitude']);
+        foreach ($addressData as $index => $data) {
+            $address = new address();
+            $address->setStreet($data['street']);
+            $address->setCity($data['city']);
+            $address->setPostalCode($data['postalCode']);
+            $address->setRegion($data['region']);
+            $address->setCountry($data['country']);
+            $address->setLatitude($data['latitude']);
+            $address->setLongitude($data['longitude']);
 
-            $manager->persist($adress);
+            $manager->persist($address);
 
-            $adressRefs[$index + 1] = $adress;
+            $addressRefs[$index + 1] = $address;
         }
 
 
@@ -64,8 +64,8 @@ class AppFixtures extends Fixture
             $user->setProfilPicture($data['profilPicture']);
             $user->setRoles($data['roles']);
 
-            $adressId = random_int(1, count($adressRefs));
-            $user->setAdress($adressRefs[$adressId]);
+            $addressId = random_int(1, count($addressRefs));
+            $user->setaddress($addressRefs[$addressId]);
 
             $manager->persist($user);
 
@@ -117,8 +117,8 @@ class AppFixtures extends Fixture
             $listing->setPricePerNight($data['pricePerNight']);
             $listing->setMaxCapacity($data['maxCapacity']);
 
-            $adressId = random_int(1, count($adressRefs));
-            $listing->setAdress($adressRefs[$adressId]);
+            $addressId = random_int(1, count($addressRefs));
+            $listing->setaddress($addressRefs[$addressId]);
 
             $ownerId = random_int(1, count($userRefs));
             $listing->setOwner($userRefs[$ownerId]);
