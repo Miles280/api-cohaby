@@ -31,35 +31,35 @@ class Address
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups(['address:read', 'address:write'])]
+    #[Groups(['address:read', 'address:write', 'listing:read', 'listing:write','user:read', 'user:write'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['address:read', 'address:write'])]
+    #[Groups(['address:read', 'address:write', 'listing:read', 'listing:write','user:read', 'user:write'])]
     private ?string $street = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['address:read', 'address:write'])]
+    #[Groups(['address:read', 'address:write', 'listing:read', 'listing:write','user:read', 'user:write'])]
     private ?string $city = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['address:read', 'address:write'])]
+    #[Groups(['address:read', 'address:write', 'listing:read', 'listing:write','user:read', 'user:write'])]
     private ?string $postalCode = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['address:read', 'address:write'])]
+    #[Groups(['address:read', 'address:write', 'listing:read', 'listing:write','user:read', 'user:write'])]
     private ?string $region = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['address:read', 'address:write'])]
+    #[Groups(['address:read', 'address:write', 'listing:read', 'listing:write','user:read', 'user:write'])]
     private ?string $country = null;
 
     #[ORM\Column]
-    #[Groups(['address:read', 'address:write'])]
+    #[Groups(['address:read', 'address:write', 'listing:read', 'listing:write','user:read', 'user:write'])]
     private ?float $latitude = null;
 
     #[ORM\Column]
-    #[Groups(['address:read', 'address:write'])]
+    #[Groups(['address:read', 'address:write', 'listing:read', 'listing:write','user:read', 'user:write'])]
     private ?float $longitude = null;
 
     /**

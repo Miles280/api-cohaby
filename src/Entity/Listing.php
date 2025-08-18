@@ -17,7 +17,6 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Serializer\Annotation\Groups;
-use Symfony\Component\Serializer\Annotation\MaxDepth;
 
 #[ORM\Entity(repositoryClass: ListingRepository::class)]
 #[ApiResource(
@@ -68,29 +67,27 @@ class Listing
     #[ORM\ManyToOne(inversedBy: 'listings')]
     #[ORM\JoinColumn(nullable: false)]
     #[Groups(['listing:read', 'listing:write'])]
-    #[MaxDepth(1)]
     private ?User $owner = null;
 
     /**
      * @var Collection<int, Service>
      */
     #[ORM\ManyToMany(targetEntity: Service::class, mappedBy: 'listings')]
-    #[MaxDepth(1)]
+    #[Groups(['listing:read'])]
     private Collection $services;
 
     /**
      * @var Collection<int, Equipment>
      */
     #[ORM\ManyToMany(targetEntity: Equipment::class, mappedBy: 'listings')]
-    #[MaxDepth(1)]
+    #[Groups(['listing:read'])]
     private Collection $equipments;
 
     /**
      * @var Collection<int, Picture>
      */
     #[ORM\OneToMany(targetEntity: Picture::class, mappedBy: 'listing',cascade: ['persist', 'remove'], orphanRemoval: true)]
-    #[Groups(['listing:read'])]
-    #[MaxDepth(1)]
+    #[Groups(['listing:read', 'listing:write'])]
     private Collection $pictures;
 
     /**
@@ -99,7 +96,7 @@ class Listing
     #[ORM\OneToMany(targetEntity: Booking::class, mappedBy: 'listing')]
     private Collection $bookings;
 
-    #[ORM\ManyToOne(inversedBy: 'listings')]
+    #[ORM\ManyToOne(inversedBy: 'listings', cascade: ["persist"])]
     #[ORM\JoinColumn(nullable: false)]
     #[Groups(['listing:read', 'listing:write'])]
     private ?Address $address = null;

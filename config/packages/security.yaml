@@ -32,10 +32,10 @@ security:
     - { path: ^/api/services, roles: PUBLIC_ACCESS }
     - { path: ^/api/equipment, roles: PUBLIC_ACCESS }
     - { path: ^/api/pictures, roles: PUBLIC_ACCESS }
-    - { path: ^/api/users$, roles: PUBLIC_ACCESS, methods: [POST] }
-    - { path: ^/api/addresses$, roles: PUBLIC_ACCESS, methods: [POST] }
+    - { path: ^/api/users, roles: PUBLIC_ACCESS }
+    - { path: ^/api/addresses, roles: PUBLIC_ACCESS }
     - { path: ^/api/login, roles: PUBLIC_ACCESS }
 
     # Routes nécessitant authentification
-    - { path: ^/api/me, roles: IS_AUTHENTICATED_FULLY }
-    - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
+    # - { path: ^/api/me, roles: IS_AUTHENTICATED_FULLY }
+    # - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
