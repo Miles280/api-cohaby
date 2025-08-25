@@ -6,6 +6,7 @@ use ApiPlatform\Doctrine\Orm\Filter\RangeFilter;
 use ApiPlatform\Doctrine\Orm\Filter\SearchFilter;
 use ApiPlatform\Metadata\ApiFilter;
 use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\Delete;
 use ApiPlatform\Metadata\Get;
 use ApiPlatform\Metadata\GetCollection;
 use ApiPlatform\Metadata\Patch;
@@ -23,18 +24,32 @@ use Symfony\Component\Serializer\Annotation\Groups;
     operations: [
         new Get(),
         new GetCollection(),
-        new Post(),
-        new Put(),
-        new Patch()
+        new Post(
+            security: "is_granted('ROLE_OWNER')  or is_granted('ROLE_ADMIN')", 
+            securityMessage: "Seuls les propriétaires peuvent créer un listing."
+        ),
+        new Put(
+            security: "object.getOwner() == user  or is_granted('ROLE_ADMIN')",
+            securityMessage: "Vous ne pouvez modifier que vos propres annonces."
+        ),
+        new Patch(
+        security: "object.getOwner() == user  or is_granted('ROLE_ADMIN')",
+        securityMessage: "Vous ne pouvez modifier que vos propres annonces."
+        ),
+        new Delete(
+            security: "object.getOwner() == user or is_granted('ROLE_ADMIN')",
+            securityMessage: "Vous ne pouvez supprimer que vos propres annonces ou si vous êtes admin."
+        ),
     ],
     normalizationContext: ['groups' => ['listing:read'], 'enable_max_depth' => true],
     denormalizationContext: ['groups' => ['listing:write']]
 )]
 #[ApiFilter(SearchFilter::class, properties: [
-    'Address.city' => 'partial',   // recherche partielle sur la ville
-    'Address.street' => 'partial', // recherche partielle sur la rue
-    'equipments.name' => 'exact', // filtre équipements exact
-    'services.name' => 'exact'    // filtre services exact
+    'Address.city' => 'partial',   
+    'Address.street' => 'partial', 
+    'equipments.name' => 'exact', 
+    'services.name' => 'exact',   
+    'owner' => 'exact'
 ])]
 #[ApiFilter(RangeFilter::class, properties: [
     'pricePerNight',
@@ -73,14 +88,14 @@ class Listing
      * @var Collection<int, Service>
      */
     #[ORM\ManyToMany(targetEntity: Service::class, mappedBy: 'listings')]
-    #[Groups(['listing:read'])]
+    #[Groups(['listing:read', 'listing:write'])]
     private Collection $services;
 
     /**
      * @var Collection<int, Equipment>
      */
     #[ORM\ManyToMany(targetEntity: Equipment::class, mappedBy: 'listings')]
-    #[Groups(['listing:read'])]
+    #[Groups(['listing:read', 'listing:write'])]
     private Collection $equipments;
 
     /**

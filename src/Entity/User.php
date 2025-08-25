@@ -38,18 +38,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    #[Groups(['user:read', 'listing:read'])]
+    #[Groups(['user:read', 'listing:read', 'booking:read'])]
     private ?int $id = null;
 
     #[ORM\Column(length: 180)]
-    #[Groups(['user:read', 'user:write', 'listing:read'])]
+    #[Groups(['user:read', 'user:write', 'listing:read', 'booking:read'])]
     private ?string $email = null;
 
     /**
      * @var list<string> The user roles
      */
     #[ORM\Column]
-    #[Groups(['user:read', 'user:write', 'listing:read'])]
+    #[Groups(['user:read', 'user:write', 'listing:read', 'booking:read'])]
     private array $roles = [];
 
     /**
@@ -60,19 +60,19 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $password = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['user:read', 'user:write', 'listing:read'])]
+    #[Groups(['user:read', 'user:write', 'listing:read', 'booking:read'])]
     private ?string $firstname = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['user:read', 'user:write', 'listing:read'])]
+    #[Groups(['user:read', 'user:write', 'listing:read', 'booking:read'])]
     private ?string $lastname = null;
 
     #[ORM\Column(length: 255)]
-    #[Groups(['user:read', 'user:write', 'listing:read'])]
+    #[Groups(['user:read', 'user:write', 'listing:read', 'booking:read'])]
     private ?string $pseudo = null;
 
     #[ORM\Column]
-    #[Groups(['user:read', 'user:write'])]
+    #[Groups(['user:read', 'user:write', 'booking:read'])]
     private ?\DateTimeImmutable $birthdate = null;
 
     #[ORM\Column]
@@ -80,11 +80,11 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private ?\DateTimeImmutable $inscriptionDate = null;
 
     #[ORM\Column(enumType: Gender::class)]
-    #[Groups(['user:read', 'user:write'])]
+    #[Groups(['user:read', 'user:write', 'booking:read'])]
     private ?Gender $gender = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    #[Groups(['user:read', 'user:write', 'listing:read'])]
+    #[Groups(['user:read', 'user:write', 'listing:read', 'booking:read'])]
     private ?string $profilPicture = null;
 
     #[ORM\ManyToOne(inversedBy: 'users', cascade: ['persist'])]

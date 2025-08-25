@@ -2,49 +2,65 @@
 
 namespace App\Entity;
 
+use ApiPlatform\Doctrine\Orm\Filter\SearchFilter;
+use ApiPlatform\Metadata\ApiFilter;
 use ApiPlatform\Metadata\ApiResource;
 use App\Enum\BookingStatus;
 use App\Repository\BookingRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 #[ORM\Entity(repositoryClass: BookingRepository::class)]
-#[ApiResource]
+#[ApiResource(
+    normalizationContext: ['groups' => ['booking:read']],
+    denormalizationContext: ['groups' => ['booking:write']]
+)]
+#[ApiFilter(SearchFilter::class, properties: ['user' => 'exact'])]
 class Booking
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
+    #[Groups(['booking:read'])]
     private ?int $id = null;
 
     #[ORM\Column]
+    #[Groups(['booking:read', 'booking:write'])]
     private ?\DateTime $beginningDate = null;
 
     #[ORM\Column]
+    #[Groups(['booking:read', 'booking:write'])]
     private ?int $totalNights = null;
 
     #[ORM\Column(enumType: BookingStatus::class)]
+    #[Groups(['booking:read', 'booking:write'])]
     private ?BookingStatus $status = null;
 
     #[ORM\Column]
+    #[Groups(['booking:read', 'booking:write'])]
     private ?int $nbrGuests = null;
 
     #[ORM\Column]
+    #[Groups(['booking:read', 'booking:write'])]
     private ?float $totalPrice = null;
 
     #[ORM\ManyToOne(inversedBy: 'bookings')]
     #[ORM\JoinColumn(nullable: false)]
+    #[Groups(['booking:read'])]
     private ?Listing $listing = null;
 
     #[ORM\ManyToOne(inversedBy: 'bookings')]
     #[ORM\JoinColumn(nullable: false)]
+    #[Groups(['booking:read'])]
     private ?User $user = null;
 
     /**
      * @var Collection<int, Comment>
      */
     #[ORM\OneToMany(targetEntity: Comment::class, mappedBy: 'booking', orphanRemoval: true)]
+    #[Groups(['booking:read', 'booking:write'])]
     private Collection $comments;
 
     public function __construct()
