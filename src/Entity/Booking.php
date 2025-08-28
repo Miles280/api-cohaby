@@ -17,7 +17,8 @@ use Symfony\Component\Serializer\Annotation\Groups;
     normalizationContext: ['groups' => ['booking:read']],
     denormalizationContext: ['groups' => ['booking:write']]
 )]
-#[ApiFilter(SearchFilter::class, properties: ['user' => 'exact'])]
+#[ApiFilter(SearchFilter::class, properties: ['listing' => 'exact', 'user' => 'exact'])]
+#[ORM\HasLifecycleCallbacks]
 class Booking
 {
     #[ORM\Id]
@@ -48,12 +49,12 @@ class Booking
 
     #[ORM\ManyToOne(inversedBy: 'bookings')]
     #[ORM\JoinColumn(nullable: false)]
-    #[Groups(['booking:read'])]
+    #[Groups(['booking:read', 'booking:write'])]
     private ?Listing $listing = null;
 
     #[ORM\ManyToOne(inversedBy: 'bookings')]
     #[ORM\JoinColumn(nullable: false)]
-    #[Groups(['booking:read'])]
+    #[Groups(['booking:read', 'booking:write'])]
     private ?User $user = null;
 
     /**
@@ -186,4 +187,14 @@ class Booking
 
         return $this;
     }
+
+    #[ORM\PrePersist]
+    #[ORM\PreUpdate]
+    public function calculateTotalPrice(): void
+    {
+        if ($this->listing && $this->totalNights && $this->nbrGuests) {
+            $this->totalPrice = $this->listing->getPricePerNight() * $this->totalNights * $this->nbrGuests;
+        }
+    }
+
 }

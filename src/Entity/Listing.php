@@ -42,7 +42,8 @@ use Symfony\Component\Serializer\Annotation\Groups;
         ),
     ],
     normalizationContext: ['groups' => ['listing:read'], 'enable_max_depth' => true],
-    denormalizationContext: ['groups' => ['listing:write']]
+    denormalizationContext: ['groups' => ['listing:write']],
+    paginationEnabled: false
 )]
 #[ApiFilter(SearchFilter::class, properties: [
     'Address.city' => 'partial',   
