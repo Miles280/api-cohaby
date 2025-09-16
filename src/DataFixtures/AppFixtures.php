@@ -214,7 +214,7 @@ class AppFixtures extends Fixture
             $message = new Message();
 
             $message->setContent($data['content']);
-            $message->setSendAt(new \DateTime($data['sendAt']));
+            $message->setSendAt(new \DateTimeImmutable($data['sendAt']));
             $message->setIsRead($data['isRead']);
             $message->setSender($userRefs[$data['sender']]);
             $message->setReceiver($userRefs[$data['receiver']]);

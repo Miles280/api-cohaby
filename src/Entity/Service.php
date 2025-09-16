@@ -24,7 +24,7 @@ use Symfony\Component\Serializer\Annotation\MaxDepth;
         new Put(),
         new Patch()
     ],
-    normalizationContext: ['groups' => ['service:read'], 'enable_max_depth' => true],
+    normalizationContext: ['groups' => ['service:read']],
     denormalizationContext: ['groups' => ['service:write']]
 )]
 class Service

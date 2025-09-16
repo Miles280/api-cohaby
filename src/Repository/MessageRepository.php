@@ -16,6 +16,18 @@ class MessageRepository extends ServiceEntityRepository
         parent::__construct($registry, Message::class);
     }
 
+    public function findUserConversations(int $userId): array
+{
+    $qb = $this->createQueryBuilder('m')
+        ->select('IDENTITY(m.sender) as senderId, IDENTITY(m.receiver) as receiverId, MAX(m.sendAt) as lastMessageDate')
+        ->where('m.sender = :userId OR m.receiver = :userId')
+        ->setParameter('userId', $userId)
+        ->groupBy('senderId, receiverId')
+        ->orderBy('lastMessageDate', 'DESC');
+
+    return $qb->getQuery()->getArrayResult();
+}
+
 //    /**
 //     * @return Message[] Returns an array of Message objects
 //     */
